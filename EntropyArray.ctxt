@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=EntropyArray
+comment0.text=\ ----------------------------------------------------------------------------\r\n\ Main\ class\:\r\n\ ----------------------------------------------------------------------------\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=relativeFilePath
+comment2.target=void\ ReadInputTextFileCharacters(java.lang.String)
+comment3.params=d
+comment3.target=double\ log2(double)
+comment4.params=
+comment4.target=void\ ComputeEntropy()
+comment5.params=
+comment5.target=void\ CountSymbols()
+comment6.params=
+comment6.target=void\ PrintOutCharProps()
+numComments=7
