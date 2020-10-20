@@ -87,23 +87,21 @@ public class EntropyArray {
 		
 	System.out.println("Done.");
 	System.out.println("======================================================");
-    }
+   }
 	
 	
    // --------------------------------------------------------------------
 	// Read character from file and count them:
 	// --------------------------------------------------------------------
     static void ReadInputTextFileCharacters(String relativeFilePath) {
-	    
-        System.out.println("Reading file ...");
-        Arrays.fill(chars, 0);
+    System.out.println("Reading file ...");
+    Arrays.fill(chars, 0);
 	    
 		// Open file and read character by character:
-		try (BufferedReader in = new BufferedReader(new FileReader(relativeFilePath))) {
-			
-			int c;
-			// Read characters c until there are no more:
-			while ((c = in.read()) != -1) {
+        try (BufferedReader in = new BufferedReader(new FileReader(relativeFilePath))) {
+        int c;
+        // Read characters c until there are no more:
+            while ((c = in.read()) != -1) {
 				if (c > ' ')  {
 					/* 
 					 * ToDo:  Häufigkeit des Symbols nachführen
@@ -116,15 +114,15 @@ public class EntropyArray {
 					 * */
 					fileCharactersCount = chars [c];
 				}
-			}
-		} 
-		catch(IOException ioe) {}
-	}
+            }
+        } 
+	catch(IOException ioe) {}
+   }
 
 	// --------------------------------------------------------------------
 	// Base 2 logarithm:
 	// --------------------------------------------------------------------
-	static double log2(double d) {
+   static double log2(double d) {
 		
 		/* 
 		 * ToDo: Logarithmus zur Basis 2 berechnen
@@ -132,12 +130,12 @@ public class EntropyArray {
 		 * */
 
 		return (Math.log(d)/Math.log(2));
-	}	
+   }	
 	
 	// --------------------------------------------------------------------
 	// Compute entropy of all characters:
 	// --------------------------------------------------------------------
-	static void ComputeEntropy() {
+   static void ComputeEntropy() {
 		
 		System.out.println( "Computing entropy...");
 		
@@ -153,13 +151,11 @@ public class EntropyArray {
 		}
 		fileEntropy = (fileCharactersCount/fileSymbolCount)*(1/(Math.log(fileCharactersCount/fileSymbolCount) / Math.log(2)));
 		
-	}
-
-	
-	// --------------------------------------------------------------------
+   }
+        // --------------------------------------------------------------------
 	// Compute entropy of all characters:
 	// --------------------------------------------------------------------
-	static void CountSymbols() {
+    static void CountSymbols() {
 		
 		System.out.println( "Computing entropy...");
 		
@@ -176,7 +172,7 @@ public class EntropyArray {
 		}
 		fileSymbolCount++;
 		
-	}
+   }
 
 
 	
@@ -213,6 +209,6 @@ public class EntropyArray {
 				System.out.format("  %5s : o=%8d  p=%14.10f  i=%14.10f%n", 
 					chr, chars[c], p, i);
 		}
-	    }
-	}
+    }
+}    
 
